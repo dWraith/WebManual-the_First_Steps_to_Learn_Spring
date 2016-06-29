@@ -1,0 +1,19 @@
+<div class="title">get_html_translation_table</div>
+                <h1>Описание:</h1>
+                <div class="text">
+              Функция возвращает таблицу трансляции, которая используется функциями htmlspecialchars() и htmlentities().   
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	    string get_html_translation_table(int table [, int quote_style])
+                </div>
+		<div class="text">
+		В этой функции аргумент table указывает, какую таблицу трансляции необходимо получить: HTML_SPECIALCHARS для функции htmlspecialchars() или HTML_ENTITIES для функции htmlentities(). Описание необязательного параметра quote_style приведено в функции htmlspecialchars(). 
+                </div>
+		<div class="syntax">
+   	   $trans = get_html_translation_table(HTML_ENTITIES);
+<br>$str = "&lt;A & B&gt;";
+<br>$encoded = strtr($str, $strans);
+<br>// $encoded = "&amplt; A &amp; B &gt;"
+                </div>
+		

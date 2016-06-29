@@ -1,0 +1,21 @@
+<div class="title">max</div>
+                <h1>Описание:</h1>
+                <div class="text">
+          Получение наибольшего аргумента.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+    mixed max(mixed $arg1 [int $arg2, ..., int $argn])
+                </div>
+		<div class="text">
+          Функция работает аналогично min(), только ищет максимальное значение.
+                </div>
+		<div class="syntax">
+  $x = max(5,3,4,6,5,6,8,9);
+<br>// $x = 9$x[0]=4;
+<br>$x[1]=1;
+<br>$x[2]=5;
+<br>$x[3]=2;
+<br>echo max($x); // выведет 5
+                </div>
+		

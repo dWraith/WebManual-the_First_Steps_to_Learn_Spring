@@ -1,0 +1,44 @@
+<div class="title">rarray_reverse</div>
+                <h1>Описание:</h1>
+                <div class="text">
+      Расстановка элементов массива в обратном порядке.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	array array_reverse(array arr [, bool preserve_keys])
+                </div>
+		<div class="text">
+        Функция array_reverse() возвращает массив, элементы которого следуют в обратном порядке относительно массива, переданного в параметре. При этом связи между ключами и значениями не теряются, если дополнительный параметр preserve_keys = TRUE. 
+                </div>
+		<div class="syntax">
+	<?php
+<br>$input  = array("php", 4.0, array("green", "red"));
+<br>$result = array_reverse($input);
+<br>$result_keyed = array_reverse($input, true);
+<br>?>
+                </div>
+		<div class="text">
+      Этот пример сделает оба массива $result и $result_keyed с одинаковыми значениями, но различными ключами. Распечатка массивов $result и $result_keyed будет следующей
+                </div>
+		<div class="syntax">
+Array
+<br>(
+  <br>  [0] => Array
+       <br> (
+         <br>   [0] => green
+       <br>     [1] => red
+      <br>  )
+  <br>  [1] => 4
+  <br>  [2] => php
+<br>)
+<br>Array
+<br>(
+  <br>  [2] => Array
+        <br>(
+       <br>     [0] => green
+    <br>        [1] => red
+<br>        )
+<br>    [1] => 4
+<br>    [0] => php
+<br>)
+			</div>

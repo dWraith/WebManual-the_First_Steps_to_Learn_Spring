@@ -1,0 +1,51 @@
+<div class="title">natcasesort</div>
+                <h1>Описание:</h1>
+                <div class="text">
+    Выполняет естественную сортировку массива без учета регистра символов. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	void natcasesort(array arr)
+                </div>
+		<div class="text">
+    Функция natcasesort() сортирует массив arr в естественном для человека порядке с сохранением индексных ассициаций. 
+Эта функция схожа с natsort(), только не учитывает регистр символов. 
+<h1>Пример использования функции natcasesort():</h1>
+                </div>
+		<div class="syntax">
+	<?php
+<br>$array1 = $array2 = array("IMG0.png", "img12.png", "img10.png",
+<br>						"img2.png", "img1.png", "IMG3.png");
+<br>sort($array1);
+<br>echo "Стандартная сортировкаn";
+<br>print_r($array1);
+<br>natcasesort($array2);
+<br>echo "nЕстественная сортировка (без учета регистра)n";
+<br>print_r($array2);
+<br>?>
+                </div>
+		<div class="text">
+  Приведенный пример выведет следующее:   
+                </div>
+		<div class="syntax">
+	Стандартная сортировка
+<br>Array
+<br>(
+<br>    [0] => IMG0.png
+<br>    [1] => IMG3.png
+<br>    [2] => img1.png
+<br>    [3] => img10.png
+<br>    [4] => img12.png
+<br>    [5] => img2.png
+<br>)
+<br>Естественная сортировка (без учета регистра)
+<br>Array
+<br>(
+<br>    [0] => IMG0.png
+<br>    [4] => img1.png
+<br>    [3] => img2.png
+<br>    [5] => IMG3.png
+<br>    [2] => img10.png
+<br>    [1] => img12.png
+<br>)
+                </div>

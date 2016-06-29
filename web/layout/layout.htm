@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="resources/style.css"/>
+        <script src="check.js"></script>
+    </head>
+    <body id="body"> 
+            <div>
+            <div id="offline">OFF-версия</div>
+            </div>
+            <div id="user_panel">
+                <a class="item" href="signup.htm">РЕГИСТРАЦИЯ</a>
+                <a class="item" href="">ВОЙТИ</a>
+            </div>
+            <div id="header">
+                    <div>
+                        <div id="logo">WebManual</div>
+                        <div class="active_header_item">CSS</div>
+                        <div class="header_item">PHP</div>
+                        <div class="header_item">ПРОФИЛЬ</div>
+                    </div>
+            </div>
+            <div>
+            <div id="menu">
+                <div class="chapter">Основы CSS</div>
+                <div id="submenu">
+                    <div class="menuitem">font-size</div>
+                    <div class="menuitem">font-style</div>
+                    <div class="menuitem">background-position-у</div>    
+                    <div class="menuitem">background-position-х</div>
+                    <div class="menuitem">background-color</div>
+                    <div class="menuitem">scrollbar-track-color</div>
+                    <div class="menuitem">font-size</div>
+                    <div class="menuitem">font-style</div>
+                    <div class="menuitem">background-position-у</div>    
+                    <div class="menuitem">background-position-х</div>
+                    <div class="menuitem">background-color</div>
+                    <div class="menuitem">scrollbar-track-color</div>
+                    <div class="menuitem">font-size</div>
+                    <div class="menuitem">font-style</div>
+                    <div class="menuitem">background-position-у</div>    
+                    <div class="menuitem">background-position-х</div>
+                    <div class="menuitem">background-color</div>
+                    <div class="menuitem">scrollbar-track-color</div>
+                    <div class="menuitem">font-size</div>
+                    <div class="menuitem">font-style</div>
+                    <div class="menuitem">background-position-у</div>    
+                    <div class="menuitem">background-position-х</div>
+                    <div class="menuitem">background-color</div>
+                    <div class="menuitem">scrollbar-track-color</div>
+                    <div class="menuitem">font-size</div>
+                    <div class="menuitem">font-style</div>
+                    <div class="menuitem">background-position-у</div>    
+                    <div class="menuitem">background-position-х</div>
+                    <div class="menuitem">background-color</div>
+                    <div class="menuitem">scrollbar-track-color</div>
+                    <div class="menuitem">font-style</div>
+                    <div class="menuitem">background-position-у</div>    
+                    <div class="menuitem">background-position-х</div>
+                    <div class="menuitem">background-color</div>
+                    <div class="menuitem">scrollbar-track-color</div>
+                    <div class="menuitem">font-size</div>
+                    <div class="menuitem">font-style</div>
+                    <div class="menuitem">background-position-у</div>    
+                    <div class="menuitem">background-position-х</div>
+                    <div class="menuitem">background-color</div>
+                    <div class="menuitem">scrollbar-track-color</div>
+                </div>
+            </div>
+            <div id="content">            
+                <div class="title">text-shadow</div>
+                <div>
+                    <h1>Описание:</h1>
+                    <div class="text">
+                        Добавляет тень к тексту, а также устанавливает её параметры: цвет тени, смещение относительно надписи и радиус размытия. Свойство <b>text-shadow</b> может работать совместно с псевдоэлементами <i>:first-letter</i> и <i>:first-line</i>.
+                    </div>
+                    <h1>Синтаксис:</h1>
+                    <div class="syntax">
+                        text-shadow: none | тень [,тень]*<br>
+                        где тень:<br>
+                        <сдвиг по x> <сдвиг по y> <радиус размытия> <цвет><br>
+                    </div>
+                    <h1>Значения:</h1>
+                    <table>
+                        <tr>
+                            <td  width=150px>none</td>
+                            <td>
+                                Отменяет добавление тени.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>цвет</td>
+                            <td>
+                                Цвет тени в любом доступном CSS формате. По умолчанию цвет тени совпадает с цветом текста. Необязательный параметр.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>сдвиг по x</td>
+                            <td>
+                                Смещение тени по горизонтали относительно текста. Положительное значение этого параметра задает сдвиг тени вправо, отрицательное — влево. Обязательный параметр.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>сдвиг по y</td>
+                            <td>
+                                Смещение тени по вертикали относительно текста. Также допустимо использовать отрицательное значение, которое поднимает тень выше текста. Обязательный параметр.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>радиус</td>
+                            <td>
+                            Задает радиус размытия тени. Чем больше это значение, тем сильнее тень сглаживается, становится шире и светлее. Если этот параметр не задан, по умолчанию устанавливается равным 0. Учтите, что алгоритм сглаживания в браузерах обычно разный, поэтому вид тени может несколько различаться в зависимости от заданных параметров сглаживания.
+                            </td>
+                        </tr>
+                    </table>
+                    <h1>Попробовать:</h1>
+                    <div class="tryform">
+                        <div class="tryform_content">
+                            <div class="lngpane">
+                                <textarea></textarea>
+                                <div class="labelforpane">HTML</div>
+                            </div>
+                            <div class="lngpane">
+                                <textarea></textarea>
+                                <div class="labelforpane">CSS</div>
+                            </div>
+                            <button>Проверить</button>
+                            <div class="resultpane">
+                                <div id="resultpane_content"></div>
+                                <div class="labelforpane">РЕЗУЛЬТАТ</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div style="background: #ededed;
+    border-top: 2px solid dimgrey;
+    padding: 25px;
+    color: black;
+    font-size: 13px;
+    FONT-FAMILY: inherit;">
+                <a href="">[CSS]</a> <a href="">[PHP]</a> <a href="">[ПРАКТИЧЕСКИЕ РАБОТЫ]</a> <a href="">[ТЕСТЫ]</a></BR>
+                <a href="">Владислав Хрипков</a> <a href="">Никита Литвинов</a><br>2016
+            <div>
+    </body>
+</html>

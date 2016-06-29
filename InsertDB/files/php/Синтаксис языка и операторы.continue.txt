@@ -1,0 +1,18 @@
+<div class="title">continue</div>
+                <h1>Описание:</h1>
+                <div class="text">
+           Переходит на начало ближайшего цикла. 
+                </div>
+                <h1>Синтаксис:</h1>
+                <div class="syntax">
+         <?php
+<br>while (list($key,$value) = each($arr))  { 
+<br> if ($key % 2) {  
+<br>continue; 
+<br>}  
+<br>do_something_odd ($value);
+<br>}
+<br>?>
+                </div>
+	
+                

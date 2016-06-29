@@ -1,0 +1,29 @@
+<div class="title">array_filter</div>
+                <h1>Описание:</h1>
+                <div class="text">
+  Функция применяет фильтр к массиву, используя пользовательскую функцию. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+  array array_filter(array input [, callback callback])
+                </div>
+		<div class="text">
+	Функция array_filter() возвращает массив, который содержит значения, имеющиеся в массиве input отфильтрованные в соответсвтии с результатами работы пользовательской функции callback. 
+В случае, если исходный массив input является ассоциативным массивом, в результирующем массиве индексы сохраняются. 
+                </div>
+		<div class="syntax">
+	<?php
+<br>function odd($var) {  
+<br>  return ($var % 2 == 1);
+<br>}
+<br>function even($var) {  
+<br>  return ($var % 2 == 0);
+<br>}
+<br>$array1 = array ("a"=>1, "b"=>2, "c"=>3, "d"=>4, "e"=>5);
+<br>$array2 = array (6, 7, 8, 9, 10, 11, 12);
+<br>echo "Нечетные :n";
+<br>print_r(array_filter($array1, "odd"));
+<br>echo "Четные   :n";
+<br>print_r(array_filter($array2, "even")); 
+<br>?>
+                </div>

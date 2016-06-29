@@ -1,0 +1,14 @@
+<div class="title">acos</div>
+                <h1>Описание:</h1>
+                <div class="text">
+        Возвращает арккосинус аргумента.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	  float acos(float $arg)
+                </div>
+		<div class="syntax">
+$x = acos(0); // $x = pi/2
+<br>$x = acos(1); // $x = 0
+                </div>
+		

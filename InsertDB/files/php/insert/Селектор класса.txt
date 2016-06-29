@@ -1,0 +1,33 @@
+﻿<div class="title"> Селектор класса</div>
+<div class="text">Селекторы класса позволяют задавать стили для одного и более элементов с одинаковым именем класса, размещенных в разных местах страницы или на разных страницах сайта. Например, для создания заголовка с классом <hrh>headline</hrh> необходимо добавить атрибут <hrh>class</hrh> со значением <hrh>headline</hrh> в открывающий тег <hrh>&#60;h1&#62;</hrh> и задать стиль для указанного класса. Стили, созданные с помощью класса, можно применять к другим элементам, не обязательно данного типа.
+</div>
+<div class="syntax">
+&#60;h1 class="headline"&#62;Инструкция пользования персональным компьютером&#60;/h1&#62;
+<br>
+<br>.headline {text-transform: uppercase; color: lightblue;}
+</div>
+
+<h1>Попробовать:</h1> 
+ <div id="tryitform"> 
+  <div class="tryform_content"> 
+   <div class="lngpane"> 
+    <textarea></textarea> 
+    <div class="labelforpane">
+      HTML 
+    </div> 
+   </div> 
+   <div class="lngpane" style="margin-left:10px"> 
+    <textarea></textarea> 
+    <div class="labelforpane">
+      CSS 
+    </div> 
+   </div> 
+   <button onclick="check()">Проверить</button> 
+   <div class="resultpane"> 
+    <div id="resultpane_content"></div> 
+    <div class="labelforpane">
+      РЕЗУЛЬТАТ 
+    </div> 
+   </div> 
+  </div> 
+ </div>  

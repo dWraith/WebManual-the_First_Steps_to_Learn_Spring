@@ -1,0 +1,13 @@
+<div class="title">pos</div>
+                <h1>Описание:</h1>
+                <div class="text">
+      Определение текущего элемента массива. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	 mixed pos(array arr)
+                </div>
+		<div class="text">
+Эта функция синоним функции current(). 
+                </div>
+		

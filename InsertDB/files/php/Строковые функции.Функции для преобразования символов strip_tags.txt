@@ -1,0 +1,23 @@
+<div class="title">strip_tags</div>
+                <h1>Описание:</h1>
+                <div class="text">
+              Удаляет из строки теги. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	    string strip_tags(string str [, string allowable_tags])
+                </div>
+		<div class="text">
+              Эта функция удаляет из строки все HTML- и PHP-теги и возвращает результат. 
+Незавершенные или фиктивные теги вызывают ошибку. 
+В параметре allowable_tags можно передать теги, которые не следует удалять из строки. Они должны перечисляться вплотную друг к другу. 
+                </div>
+		<div class="syntax">
+   	   $st="
+<br>&lt;b&gt;Жирный текст&lt;/b&gt;
+<br>&lt;tt&gt;Моноширный текст&lt;/tt&gt;
+<br>&lt;a href=http://spravkaweb.ru&gt;Ссылка&lt;/a&gt;";
+<br>echo "Исходный текст: $st";
+<br>echo "&lt;hr&gt;После удаления тегов: ".striptags($st,"&lt;a&gt;&lt;b&gt;").  
+<br>   "&lt;hr&gt;";
+                </div>

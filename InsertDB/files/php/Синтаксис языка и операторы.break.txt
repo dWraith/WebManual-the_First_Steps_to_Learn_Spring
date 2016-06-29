@@ -1,0 +1,17 @@
+<div class="title">break</div>
+                <h1>Описание:</h1>
+                <div class="text">
+            Прерывает выполнение текущего цикла.
+                </div>
+                <h1>Синтаксис:</h1>
+                <div class="syntax">
+         $a = 0;
+<br><while ($a < 5) {   
+<br>if ($arr[$a] == "stop") {   
+<br>break;
+<br>}    
+<br>$a++;
+<br>}
+                </div>
+	
+                

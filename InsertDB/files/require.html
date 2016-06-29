@@ -1,0 +1,349 @@
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <title>WebManual</title> 
+  <link rel="stylesheet" type="text/css" href="resources/style.css"> 
+  <script src="resources/check.js"></script> 
+ </head> 
+ <body id="body"> 
+  <div style="height: 20px"> 
+   <div id="offline">
+    OFF-версия
+   </div> 
+  </div> 
+  <div id="header"> 
+   <a class="header_item" href="index.html">WebManual</a> 
+   <a class="header_item" href="css.html">CSS</a> 
+   <a class="active_header_item" href="php.html">PHP</a> 
+  </div>  
+  <div id="menu"> 
+   <div class="chapter">
+    PHP
+   </div> 
+   <div class="menu_title">
+    Синтаксис языка и операторы
+   </div> 
+   <div id="submenu"> 
+    <div class="menuitem">
+     <a title="Прерывает выполнение текущего цикла." href="break.html">break</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Набор переменных и функций, работающих с этими переменными." href="class.html">class</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Переходит на начало ближайшего цикла." href="continue.html">continue</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Цикл, аналогичный WHILE, но значение логического выражения проверяется не до, а после окончания итерации." href="do_while.html">do_while</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Объявление функции." href="function.html">function</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Объявление функции." href="function.html">function</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Оператор OLD_FUNCTION позволяет вам определяить функцию используя синтаксис PHP/FI2 (за исключением того, что вы должны заменить " function" на "old_function")." href="old_function.html">old_function</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Заменяет себя содержимым указанного файла." href="require.html">require</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Сравнивает переменную или выражение с различными значениями и выполняет различные фрагменты кода в зависимости от того, чему будет равно значение выражения." href="switch.html">switch</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Простейший тип цикла в PHP." href="while.html">while</a>
+    </div> 
+   </div> 
+   <div class="menu_title">
+    Работа с массивами
+   </div> 
+   <div id="submenu"> 
+    <div class="menuitem">
+     <a title="Применение пользовательской функции к элементам массива." href="array_walk.html">array_walk</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Определение текущего элемента массива." href="current.html">current</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Получение текущего элемента массива." href="each.html">each</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Производит перенос курсора в конец массива." href="end.html">end</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Функция возвращает индекс текущего элемента массива." href="key.html">key</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Производит перенос курсора вперед." href="next.html">next</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Определение текущего элемента массива." href="pos.html">pos</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Производит перенос курсора назад и возвращает предыдущее значени" href="prev.html">prev</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Производит сброс курсора массива." href="reset.html">reset</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Упаковывает в массив переменные из текущего контекста." href="compact.html">compact</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Импорт элементов массива в переменные" href="extract.html">extract</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Заносит элементы массива в переменные." href="list.html">list</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Получение части массива." href="array_slice.html">array_slice</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Удаляет часть массива или заменяет ее частью другого массива." href="array_splice.html">array_splice</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Создание и инициализация массива." href="array.html">array</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Создает массив и заполняет его значениями." href="range.html">range</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Сортировка нескольких массивов или многомерного массива" href="array_multisort.html">array_multisort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Расстановка элементов массива в обратном порядке." href="rarray_reverse.html">rarray_reverse</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Сортировка ассоциативного массива по возрастанию." href="asortt.html">asortt</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Сортировка массива по убыванию индексов" href="krsort.html">krsort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Сортировка массива по возрастанию ключейю" href="ksort.html">ksort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Выполняет естественную сортировку массива без учета регистра символов." href="natcasesort.html">natcasesort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Выполняет " естественную" сортировку массива." href="natsort.html">natsort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Сортировка массива по убыванию." href="rsort.html">rsort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Перемешивание элементов массива." href="shuffle.html">shuffle</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Сортировка массива по возрастанию." href="sort.html">sort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Пользовательская сортировка ассоциативного массива с сохранением индексных ассоциаций." href="uasort.html">uasort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Пользовательская сортировка массива по ключам." href="uksort.html">uksort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Пользоваетльская сортировка значений массива." href="usort.html">usort</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Функция разбивает массив на части" href="array_chunk.html">array_chunk</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Функция применяет фильтр к массиву, используя пользовательскую функцию." href="array_filter.html">array_filter</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Применение пользовательской функции ко всем элементам указанных массивов." href="array_map.html">array_map</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Добавляет в массив несколько элементов" href="array_pad.html">array_pad</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Извлекает и удаляет последние элементы массива." href="array_pop.html">array_pop</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Добавляет один или несколько элементов в конец массива." href="array_push.html">array_push</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Извлекает и удаляет первый элемент массива." href="array_shift.html">array_shift</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Удаляет дублирующие значения в массиве" href="array_unique.html">array_unique</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Добавляет одно или несколько значений в начало массива." href="array_unshift.html">array_unshift</a>
+    </div> 
+   </div> 
+   <div class="menu_title">
+    Математические функции
+   </div> 
+   <div id="submenu"> 
+    <div class="menuitem">
+     <a title="Возвращает модуль числа." href="abs.html">abs</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает арккосинус аргумента." href="acos.html">acos</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает арксинус." href="asin.html">asin</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Получение арктангенса двух чисел." href="atan2.html">atan2</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Дополнение дробного числа до следующего целого." href="ceil.html">ceil</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает косинус аргумента." href="cos.html">cos</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает e (2,718281828) в степени $arg." href="exp.html">exp</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Удаление дробной части числа." href="floor.html">floor</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает максимально возможное случайное число." href="getrandmax.html">getrandmax</a>
+    </div> 
+    <div class="menuitem">
+     <a title="функция генерирует случайное дробное число." href="lcg_value.html">lcg_value</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает натуральный логарифм аргумента" href="log.html">log</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает десятичный логарифм аргумента." href="log10.html">log10</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Получение наибольшего аргумента." href="max.html">max</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Эта функция возвращает наименьшее из чисел, заданных в ее аргументах" href="min.html">min</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает максимальное MT-случайное число." href="mt_getrandmax.html">mt_getrandmax</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Функция возвращает MT-случайное число, достаточно равномерно даже для того, чтобы использовать его в криптографии." href="mt_rand.html">mt_rand</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Настраивает MT-генератор случайных чисел на новую последовательность." href="mt_srand.html">mt_srand</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает число пи - 3,14." href="pi.html">pi</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возведение в степень" href="pow.html">pow</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Производит генерацию случайного числа." href="rand.html">rand</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Округление дробного числа до целого." href="round.html">round</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает синус аргумента." href="sin.html">sin</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает квадратный корень из аргумента." href="sqrt.html">sqrt</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Производит инициализацию генератора случайных чисел." href="srand.html">srand</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает тангенс аргумента, заданного в радианах." href="tan.html">tan</a>
+    </div> 
+   </div> 
+   <div class="menu_title">
+    Строковые функции
+   </div> 
+   <div id="submenu"> 
+    <div class="menuitem">
+     <a title="Функция возвращает таблицу трансляции, которая используется функциями htmlspecialchars() и htmlentities()." href="get_html_translation_table.html">get_html_translation_table</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Функция ищет и обрабатывает все теги ." href="get_meta_tags.html">get_meta_tags</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Конвертация логического текста Hebrew в отображаемый." href="hebrev.html">hebrev</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Заменяет символы перевода строки." href="nl2br.html">nl2br</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Преобразование цитированной строки в 8-битную." href="quoted_printable_decode.html">quoted_printable_decode</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Удаляет из строки теги." href="strip_tags.html">strip_tags</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает один символ с определенным кодом." href="chr.html">chr</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Возвращает ascii код символа." href="ord.html">ord</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Удаляет из заданной строки начальные и конечные пробельные символы." href="trim.html">trim</a>
+    </div> 
+   </div> 
+   <div class="menu_title">
+    Работа с файлами
+   </div> 
+   <div id="submenu"> 
+    <div class="menuitem">
+     <a title="Закрывает файл, открытый предварительно функцией fopen()." href="fclose.html">fclose</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Создает новый временный файл с уникальным именем и открывает его на чтение и запись." href="tmpfile.html">tmpfile</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Открывает файл и привязывает его к дескриптору" href="fopen.html">fopen</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Функция для работы с одним из форматов файлов, в котором может сохранять данные Excel." href="fgetcsv.html">fgetcsv</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Читает из файла одну строку, заканчивающуюся символом новой строки n." href="fgets.html">fgets</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Полный аналог fwrite()." href="fputs.html">fputs</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Читает из открытого файла определенное количество символов." href="fread.html">fread</a>
+    </div> 
+    <div class="menuitem">
+     <a title="Запись в файл." href="fwrite.html">fwrite</a>
+    </div> 
+   </div> 
+  </div> 
+  <div id="content">
+   <div class="title">
+     require 
+   </div> 
+   <div class="page_content"> 
+    <h1>Описание:</h1> 
+    <div class="text">
+      Заменяет себя содержимым указанного файла. 
+    </div> 
+    <h1>Синтаксис:</h1> 
+    <div class="syntax">
+      require("include.inc"); 
+    </div> 
+    <div class="text">
+      Но его нельзя поместить внутрь цикла и ожидать, что он включит содержимое другого файла несколько раз в процессе каждой итерации. Для этого есть INCLUDE. 
+    </div> 
+   </div>
+  </div> 
+  <div style="clear: both; height: 20px;"></div> 
+  <div id="footer"> 
+   <a href="css.html">[CSS]</a> 
+   <a href="php.html">[PHP]</a> 
+   <a href="css.html">[ПРАКТИЧЕСКИЕ РАБОТЫ]</a> 
+   <a href="tests.html">[ТЕСТЫ]</a>
+   <br> 
+   <a href="">Владислав Хрипков</a> 
+   <a href="">Никита Литвинов</a>
+   <br>2016 
+  </div>  
+ </body>
+</html>

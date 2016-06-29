@@ -1,0 +1,26 @@
+<div class="title">current</div>
+                <h1>Описание:</h1>
+                <div class="text">
+      Определение текущего элемента массива.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	 mixed current(array arr)
+                </div>
+		<div class="text">
+Каждый массив имеет внутренний указатель(курсор) текущего элемента. Обычно он указывает на первый элемент массива. 
+Функция current() возвращает значение элемента, на котором в данный момент находится курсор массива, при этом не сдвигая курсор. 
+Если указатель находиться за пределами массива, или массив пустой, то функция возвратит FALSE.
+<br><h1>Пример использования функции current(): </h1>
+                </div>
+		<div class="syntax">
+   	 <?php
+<bR>$transport = array("foot", "bike", "car", "plane");
+<bR>$mode = current($transport); // $mode = "foot";
+<bR>$mode = next($transport);    // $mode = "bike";
+<bR>$mode = current($transport); // $mode = "bike";
+<bR>$mode = prev($transport);    // $mode = "foot";
+<bR>$mode = end($transport);     // $mode = "plane";
+<bR>$mode = current($transport); // $mode = "plane";
+<bR>?>
+                </div>

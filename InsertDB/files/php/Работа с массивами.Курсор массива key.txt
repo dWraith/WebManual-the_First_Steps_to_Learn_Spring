@@ -1,0 +1,33 @@
+<div class="title">key</div>
+                <h1>Описание:</h1>
+                <div class="text">
+      Функция возвращает индекс текущего элемента массива. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	mixed key(array arr)
+                </div>
+		<div class="text">
+Функция key() возвращает индекс текущего элемента массива. 
+<br><h1>Пример использования функции key(): </h1> 
+                </div>
+		<div class="syntax">
+   	<?php
+<br>$array = array( 
+ <br>  "fruit1" => "apple",    
+<br>"fruit2" => "orange",    
+<br>"fruit3" => "grape",    
+<br>"fruit4" => "apple",    
+<br>"fruit5" => "apple");
+<br>// этот цикл пройдется по всему массиву
+<br>// и выведет имя ключа элемента массива
+<br>// значение которого равно "apple"
+<br>while ($fruit_name = current($array)) { 
+<br>if ($fruit_name == "apple") { 
+<br> echo key($array)."*"; 
+<br>}    
+<br>next($array);
+<br>}
+<br>?>
+                </div>
+		

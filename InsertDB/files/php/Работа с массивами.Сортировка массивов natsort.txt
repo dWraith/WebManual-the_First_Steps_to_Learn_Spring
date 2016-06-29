@@ -1,0 +1,45 @@
+<div class="title">natsort</div>
+                <h1>Описание:</h1>
+                <div class="text">
+    Выполняет "естественную" сортировку массива.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	void natsort(array arr)
+                </div>
+		<div class="text">
+    Функция natsort() сортирует массив arr в естественном для человека порядке с сохранением индексных ассициаций. 
+<h1>Пример использования функции natsort():</h1> 
+                </div>
+		<div class="syntax">
+	<?php
+<br>$array1 = $array2 = array("img12.png", "img10.png", "img2.png", "img1.png");
+<br>sort($array1);
+<br>echo "Стандартная сортировкаn";
+<br>print_r($array1);
+<br>natsort($array2);
+<br>echo "nЕстественная сортировкаn";
+<br>print_r($array2);
+<br>?>
+                </div>
+		<div class="text">
+  Этот пример выведет следующее:   
+                </div>
+		<div class="syntax">
+	Стандартная сортировка
+<br>Array
+<br>(
+ <br>   [0] => img1.png
+ <br>   [1] => img10.png
+  <br>  [2] => img12.png
+   <br> [3] => img2.png
+<br>)
+<br>Естественная сортировка
+<br>Array
+<br>(
+  <br>  [3] => img1.png
+ <br>   [2] => img2.png
+   <br> [1] => img10.png
+   <br> [0] => img12.png
+<br>)
+                </div>

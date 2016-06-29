@@ -1,0 +1,14 @@
+<div class="title">hebrev</div>
+                <h1>Описание:</h1>
+                <div class="text">
+              Конвертация логического текста Hebrew в отображаемый. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	    string hebrev(string hebrew_text [, int max_chars_per_line]);
+                </div>
+		<div class="text">
+		Необязательный аргумент max_chars_per_line указывает число символов на строку вывода. Функция пытается избежать разрыва слова.
+                </div>
+		
+		

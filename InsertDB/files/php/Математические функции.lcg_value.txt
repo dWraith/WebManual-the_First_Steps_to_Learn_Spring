@@ -1,0 +1,14 @@
+<div class="title">lcg_value</div>
+                <h1>Описание:</h1>
+                <div class="text">
+          функция генерирует случайное дробное число.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+    double lcg_value()
+                </div>
+		<div class="text">
+          Эта функция возвращает псевдослучайное дробное число в диапазоне от 0 до 1. 
+                </div>
+		
+		

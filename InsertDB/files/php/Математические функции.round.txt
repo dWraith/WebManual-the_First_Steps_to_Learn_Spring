@@ -1,0 +1,22 @@
+<div class="title">round</div>
+                <h1>Описание:</h1>
+                <div class="text">
+             Округление дробного числа до целого.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+        double round(double $val)
+                </div>
+		<div class="text">
+            Округляет $val до ближайшего целого и возвращает результат. 
+                </div>
+		<div class="syntax">
+       $foo = round(3.4); // $foo == 3.0
+<br>$foo = round(3.5); // $foo == 4.0
+<br>$foo = round(3.6); // $foo == 4.0
+<br>$x = round(5.3);  // $x=5
+<br>$x = round(5.4);  // $x=5
+<bR>$x = round(5.45); // $x=5
+<br>$x = round(5.5);  // $x=6
+                </div>
+		

@@ -1,0 +1,33 @@
+<div class="title">do_while</div>
+                <h1>Описание:</h1>
+                <div class="text">
+            Цикл, аналогичный WHILE, но значение логического выражения проверяется не до, а после окончания итерации. Основное отличие - то что цикл хоть один раз но выполнится. 
+                </div>
+                <h1>Синтаксис:</h1>
+                <div class="syntax">
+?php
+<br>$a = 1;
+<br>do { 
+ <br>echo $a;
+<br>}  while ($a > 1);
+<br>?>
+                </div>
+		<div class="text">
+           Можно прекратить использовать блок операторов в середине путем внедрения оператора BREAK в цикл DO..WHILE(0) : 
+                </div>
+		<div class="syntax">
+<?php
+<br>do { 
+<br>if ($a == 5) {   
+<br>echo "A равно 5"  
+<br>break;
+<br>} 
+<br>$a *= $b;
+<br>if ($a < $minimum) {   
+<br>break; 
+<br>}  
+<br>echo "A равен $a";
+<br>} while(0);
+<br>?>
+                </div>
+                

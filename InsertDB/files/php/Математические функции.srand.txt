@@ -1,0 +1,18 @@
+<div class="title">srand</div>
+                <h1>Описание:</h1>
+                <div class="text">
+           Производит инициализацию генератора случайных чисел. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+       void srand(int seed)
+                </div>
+		<div class="text">
+           Инициализирует генератор случайных чисел занчением seed.
+                </div>
+		<div class="syntax">
+srand((double) microtime()*1000000);
+<br>$random = rand();
+<br>echo $random;
+                </div>
+		

@@ -1,0 +1,35 @@
+﻿<div class="title">Селектор псевдоэлемента</div>
+<div class="text">Псевдоэлементы используются для добавления содержимого, которое генерируется с помощью свойства content:
+<br>
+<br>:first-letter — выбирает первую букву каждого абзаца, применяется только к блочным элементам;
+
+<br>:first-line — выбирает первую строку текста элемента, применяется только к блочным элементам;
+
+<br>:before — вставляет генерируемое содержимое перед элементом;
+
+<br>:after — добавляет генерируемое содержимое после элемента.
+
+<h1>Попробовать:</h1> 
+ <div id="tryitform"> 
+  <div class="tryform_content"> 
+   <div class="lngpane"> 
+    <textarea></textarea> 
+    <div class="labelforpane">
+      HTML 
+    </div> 
+   </div> 
+   <div class="lngpane" style="margin-left:10px"> 
+    <textarea></textarea> 
+    <div class="labelforpane">
+      CSS 
+    </div> 
+   </div> 
+   <button onclick="check()">Проверить</button> 
+   <div class="resultpane"> 
+    <div id="resultpane_content"></div> 
+    <div class="labelforpane">
+      РЕЗУЛЬТАТ 
+    </div> 
+   </div> 
+  </div> 
+ </div>  

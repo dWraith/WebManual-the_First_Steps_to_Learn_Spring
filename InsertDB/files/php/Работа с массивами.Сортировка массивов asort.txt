@@ -1,0 +1,30 @@
+<div class="title">asortt</div>
+                <h1>Описание:</h1>
+                <div class="text">
+     Сортировка ассоциативного массива по возрастанию.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	bool asort(array arr [, int sort_flags])
+                </div>
+		<div class="text">
+      Функция asort() сортирует массив, указанный в ее параметре, так, чтобы его значения шли в алфавитном (если это строки) или возрастающем (для чисел) порядке. При этом сохраняются связи между ключами и соответствующими им значениями, т.е. некоторые пары ключ=>значение просто "всплывают" наверх, а некоторые - наоборот, "опускаются".
+Функция возвращает true в случае успешного завершения, и false в случае возникновения ошибки.   
+                </div>
+		<div class="syntax">
+	$arr=array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+<br>arsort($arr);
+<br>reset($arr);
+<br>while(list ($key, $val) = each ($arr)) {  
+<br>echo "$key = $val<BR>l";
+<br>}
+                </div>
+		<div class="text">
+     Пример выведет: 
+                </div>
+		<div class="syntax">
+	a = orange
+<br>d = lemon
+<br>b = banana
+<br>c = apple
+                </div>

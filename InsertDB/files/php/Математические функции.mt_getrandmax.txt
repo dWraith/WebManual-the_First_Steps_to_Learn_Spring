@@ -1,0 +1,17 @@
+<div class="title">mt_getrandmax</div>
+                <h1>Описание:</h1>
+                <div class="text">
+          Возвращает максимальное MT-случайное число.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+    int mt_getrandmax()
+                </div>
+		<div class="text">
+          Возвращает максимальное число, которое может быть сгенерированно функцией mt_rand() - иными словами, константу RAND_MAX 
+                </div>
+		<div class="syntax">
+   $max = mt_getrandmax();
+<br>// $max = 2147483647
+                </div>
+		

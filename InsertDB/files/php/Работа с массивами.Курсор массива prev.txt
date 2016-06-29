@@ -1,0 +1,24 @@
+<div class="title">prev</div>
+                <h1>Описание:</h1>
+                <div class="text">
+      Производит перенос курсора назад и возвращает       предыдущее значени
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	  mixed prev(array arr)
+                </div>
+		<div class="text">
+Функция prev() перемещает курсор массива на предыдущий элемент и возвращает его значение. Возвращает false, если элементов больше не осталось. 
+Также false возвращается, если встречается элемент с пустым значением, следовательно для корректной работы с массивом, содержащим пустые элементы, лучще использовать функцию each(). 
+<br><h1>Пример использования функции prev():</h1> 
+                </div>
+		<div class="syntax">
+   	 <?php
+<bR>$transport = array("foot", "bike", "car", "plane");
+<bR>$mode = current($transport); // $mode = "foot";
+<bR>$mode = next($transport);    // $mode = "bike";
+<bR>$mode = next($transport);    // $mode = "car";
+<bR>$mode = prev($transport);    // $mode = "bike";
+<bR>$mode = end($transport);     // $mode = "plane";
+<bR>?>
+                </div>

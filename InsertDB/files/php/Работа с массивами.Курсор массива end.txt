@@ -1,0 +1,19 @@
+<div class="title">end</div>
+                <h1>Описание:</h1>
+                <div class="text">
+        Производит перенос курсора в конец массива.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	  mixed end(array arr)
+                </div>
+		<div class="text">
+Функция end() устанавливает внутренний курсор массива arr на последний элемент и возвращает значение этого элемента. 
+<br><h1>Пример использования функции end():</h1> 
+                </div>
+		<div class="syntax">
+   	 <?php
+<br>$fruits = array("apple", "banana", "cranberry");
+<br>echo end($fruits); // cranberry
+<br>?>
+                </div>

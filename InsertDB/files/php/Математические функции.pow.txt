@@ -1,0 +1,17 @@
+<div class="title">pow</div>
+                <h1>Описание:</h1>
+                <div class="text">
+         Возведение в степень
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	    float pow(float $base, float $exp)
+                </div>
+		 <div class="text">
+         Возвращает $base в степени $exp. 
+                </div>
+		<div class="syntax">
+ $x = pow(3,2);   // $x = 9
+<br>$x = pow("3",2); // $x = 9
+                </div>
+		

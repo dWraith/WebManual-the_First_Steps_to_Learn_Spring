@@ -1,0 +1,25 @@
+<div class="title">shuffle</div>
+                <h1>Описание:</h1>
+                <div class="text">
+      Перемешивание элементов массива.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	void shuffle(array arr)
+                </div>
+		<div class="text">
+      Функция shuffle() "перемешивает" список, переданный ей первым параметром arr, так, чтобы его значения распределялись случайным образом. При этом измениться сам массив и ассоциативные массивы воспринимаются как списки.
+                </div>
+		<div class="syntax">
+	<?php
+<br>$numbers = range(1, 20);
+<br>srand((float)microtime() * 1000000);
+<br>shuffle($numbers);while (list(, $number) = each($numbers)) { 
+<br>   echo "$number ";
+<br>}
+<br>?>
+                </div>
+		<div class="text">
+      Замечание: Начиная с PHP 4.2.0, больше нет необходимости инициализировать генератор случайных чисел функциями srand() или mt_srand(), поскольку теперь это происходит автоматически. 
+                </div>
+		

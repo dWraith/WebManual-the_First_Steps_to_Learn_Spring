@@ -1,0 +1,16 @@
+<div class="title">pi</div>
+                <h1>Описание:</h1>
+                <div class="text">
+        Возвращает число пи - 3,14.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	 double pi()
+                </div>
+		<div class="text">
+        Эту функцию обязательно нужно вызывать с парой пустых скобок
+                </div>
+		<div class="syntax">
+$x = pi()*2 // $x = 31.415926535898
+                </div>
+		

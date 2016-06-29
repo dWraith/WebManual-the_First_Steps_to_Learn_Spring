@@ -1,0 +1,33 @@
+<div class="title">rsort</div>
+                <h1>Описание:</h1>
+                <div class="text">
+     Сортировка массива по убыванию.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	bool rsort ( array array [, int sort_flags])
+                </div>
+		<div class="text">
+      Функция rsort() сортирует массив array в порядке убывания (от высших значений к низшим). 
+Функция возвращает TRUE в случае успешного завершения, и FALSE в противном случае. 
+<h1>Пример использования функции rsort():</h1>  
+                </div>
+		<div class="syntax">
+	<?php
+<br>$fruits = array("lemon", "orange", "banana", "apple");
+<br>rsort($fruits);
+<br>reset($fruits);
+<br>while (list($key, $val) = each($fruits)) { 
+ <br>  echo "$key = $valn";
+<br>}
+<br>?>
+                </div>
+		<div class="text">
+     Этот пример выведет: 
+                </div>
+		<div class="syntax">
+	0 = orange
+<br>1 = lemon
+<br>2 = banana
+<br>3 = apple
+                </div>

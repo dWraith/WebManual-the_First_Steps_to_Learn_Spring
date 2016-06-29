@@ -1,0 +1,53 @@
+<div class="title">class</div>
+                <h1>Описание:</h1>
+                <div class="text">
+             Набор переменных и функций, работающих с этими переменными.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+        <?php
+<br>class Cart { 
+ <br>var $items; // Количество вещей в корзине покупателя
+  <br>// Добавить $num наименований типа $artnr в корзину 
+<br> function add_item ($artnr, $num) {  
+  <br>$this->items[$artnr] += $num;  
+<br>} 
+ <br>// Убрать $num наименований $artnr из корзины  
+<br>function remove_item ($artnr, $num) {  
+  <br>if ($this->items[$artnr] > $num) {    
+   <br>$this->items[$artnr] -= $num;     
+   <br>return true;    
+<br>} else {    
+  <br>return false; 
+   <br>}
+  <br>}
+<br>}
+<br>?>
+                </div>
+		<div class="text">
+             Классы это типы, то есть, заготовки для реальных переменных. Вы должны создавать переменные желаемого типа, используя оператор <b>new:</b> 
+                </div>
+		<div class="syntax">
+        $cart = new Cart;
+<br>$cart->add_item("10", 1);
+                </div>
+		<div class="text">
+            Классы могут быть расширениями других классов. Расширенный класс обладает всеми переменными и функциями базового класса и тем, что вы определите при расширении класса. Это делается используя ключевое слово extends : 
+                </div>
+		<div class="syntax">
+       class Named_Cart extends Cart {  
+<br>var $owner; 
+ <br>function set_owner ($name) { 
+   <br>$this->owner = $name;
+<br>}
+<br>}
+                </div>
+		<div class="text">
+            Это определяет класс Named_Cart, который имеет все переменные и функции класса Cart плюс дополнительную переменную $owner и дополнительную функцию set_owner(). Вы можете создать поименованую корзину обычным образом и установить или получить владельца корзины. Также вы можете использовать и нормальные функции корзины в поименованой корзине : 
+                </div>
+		<div class="syntax">
+       $ncart = new Named_Cart;   //Создать корзину
+<br>$ncart->set_owner ("kris");//Указать владельцаprint 
+<br>$ncart->owner;             //Распечатать имя владельца корзины
+<br>$ncart->add_item ("10", 1);//унаследовано из обычной корзины
+                </div>

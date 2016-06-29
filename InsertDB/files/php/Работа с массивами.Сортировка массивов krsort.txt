@@ -1,0 +1,32 @@
+<div class="title">krsort</div>
+                <h1>Описание:</h1>
+                <div class="text">
+    Сортировка массива по убыванию индексов
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	bool krsort(array arr [, int sort_flags])
+                </div>
+		<div class="text">
+     Функция krsort() сортирует ключи в массиве arr в обратном порядке. При этом связка ключей и значений сохраняется. Эта функци полезна при сортировке ассоциативных массивов. 
+Функция возвращает true в случае успешного завершения, и false в противном случае.  
+                </div>
+		<div class="syntax">
+	<?php
+<br>$fruits = array("d"=>"lemon", "a"=>"orange", "b"=>"banana", "c"=>"apple");
+<br>krsort($fruits);
+<br>reset($fruits);
+<br>while (list($key, $val) = each($fruits)) {  
+ <br> echo "$key = $valn";
+<br>}
+<br>?>
+                </div>
+		<div class="text">
+  Данный пример выведет:  
+                </div>
+		<div class="syntax">
+	d = lemon
+<br>c = apple
+<br>b = banana
+<br>a = orange
+                </div>

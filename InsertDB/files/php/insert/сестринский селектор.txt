@@ -1,0 +1,29 @@
+﻿<div class="title">Сестринский селектор</div>
+<div class="text">Сестринские отношения возникают между элементами, имеющими общего родителя. Селекторы сестринских элементов позволяют выбрать элементы из группы элементов одного уровня
+<br>h1 + p — выберет все первые абзацы, идущие непосредственно за любым тегом &#60;h1&#62;, не затрагивая остальные абзацы;
+
+<br>h1 ~ p — выберет все абзацы, являющиеся сестринскими по отношению к любому заголовку h1 и идущие сразу после него.
+<h1>Попробовать:</h1> 
+ <div id="tryitform"> 
+  <div class="tryform_content"> 
+   <div class="lngpane"> 
+    <textarea></textarea> 
+    <div class="labelforpane">
+      HTML 
+    </div> 
+   </div> 
+   <div class="lngpane" style="margin-left:10px"> 
+    <textarea></textarea> 
+    <div class="labelforpane">
+      CSS 
+    </div> 
+   </div> 
+   <button onclick="check()">Проверить</button> 
+   <div class="resultpane"> 
+    <div id="resultpane_content"></div> 
+    <div class="labelforpane">
+      РЕЗУЛЬТАТ 
+    </div> 
+   </div> 
+  </div> 
+ </div>  

@@ -1,0 +1,23 @@
+<div class="title">array_map</div>
+                <h1>Описание:</h1>
+                <div class="text">
+  Применение пользовательской функции ко всем элементам указанных массивов. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+  array array_map(mixed callback, array arr1 [, array ...])
+                </div>
+		<div class="text">
+	Функция array_map() возвращает массив, который содержит элементы всех указанных массивов после обработки пользовательской функцией callback. 
+Количество параметров, передаваемых пользовательской функции, должно совпадать с количеством массивов, переданных функции array_map(). 
+                </div>
+		<div class="syntax">
+	<?php
+<br>function cube($n) {  
+<br>  return $n*$n*$n;
+<br>}
+<br>$a = array(1, 2, 3, 4, 5);
+<br>$b = array_map("cube", $a);
+<br>print_r($b);
+<br>?>
+                </div>

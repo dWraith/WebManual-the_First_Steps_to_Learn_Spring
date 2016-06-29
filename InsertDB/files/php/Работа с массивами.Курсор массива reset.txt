@@ -1,0 +1,25 @@
+<div class="title">reset</div>
+                <h1>Описание:</h1>
+                <div class="text">
+        Производит сброс курсора массива.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	  mixed reset(array arr)
+                </div>
+		<div class="text">
+Функция reset() устанавливает внутренний курсор массива arr на его начало и возвращает значение начального элемента. 
+<br><h1>Пример использования функции reset():</h1>
+                </div>
+		<div class="syntax">
+   	 <?php
+<br>$array = array("step one", "step two", "step three","step four"); 
+ <br>// by default, the pointer is on the first element  
+<br>echo current($array) . "/>n"; // "step one"
+<br>// skip two steps    
+<br>next($array);                                 <next($array);
+<br>echo current($array) . "/>n"; // "step three"  <br>// reset pointer, start again on step one
+<br>reset($array);
+<br>echo current($array) . "/>n"; // "step one"
+<br>?>
+                </div>

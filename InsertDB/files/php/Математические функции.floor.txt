@@ -1,0 +1,17 @@
+<div class="title">floor</div>
+                <h1>Описание:</h1>
+                <div class="text">
+            Удаление дробной части числа. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+       int floor(float $number)
+                </div>
+		<div class="text">
+           Возвращает максимальное целое число, не превосходящее $number
+                </div>
+		<div class="syntax">
+$x = floor(5.1);  // $x=5
+<br>$x = floor(5.9);  // $x=5
+                </div>
+		

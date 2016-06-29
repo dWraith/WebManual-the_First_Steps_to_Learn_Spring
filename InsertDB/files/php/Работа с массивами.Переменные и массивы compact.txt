@@ -1,0 +1,23 @@
+<div class="title">compact</div>
+                <h1>Описание:</h1>
+                <div class="text">
+  Упаковывает в массив переменные из текущего контекста.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+ array compact(mixed varname1 [, mixed $varname2, ...])
+                </div>
+		<div class="text">
+	Функция compact() упаковывает в массив переменные из текущего контекста (глобального или контекста функции), заданные своими именами в varname1, $varname2 и т.д. При этом в массиве образуются пары с ключами, равными содержимому varnameN, и значениями соответствующих переменных. 
+Число аргументов может быть неопределенное. 
+Если в аргументе указано имя несуществующей переменной, он пропускается. Действие этой функции противоположно функции extract(). 
+                </div>
+		<div class="syntax">
+	<?php
+<br>$city  = "San Francisco";
+<br>$state = "CA";
+<br>$event = "SIGGRAPH"";
+<br>$location_vars = array("city", "state");
+<br>$result = compact("event", "nothing_here", $location_vars);
+<br>?>
+                </div>

@@ -1,0 +1,25 @@
+<div class="title">array_pad</div>
+                <h1>Описание:</h1>
+                <div class="text">
+       Добавляет в массив несколько элементов
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	array array_pad(array input, int pad_size, mixed pad_value)
+                </div>
+		<div class="text">
+        Функция array_pad() возвращает копию массива input, в который были добавлены элементы с значениями pad_value, так, что число элементов в получившемся массиве будет равно pad_size. 
+Если pad_size>0, то элементы будут добавлены в конец массива, а если <0 - то в начало. 
+В случае, если значение pad_size меньше элементов в исходном массиве input, то никакого добавления не произойдет, и функция вернет исходный массив input. 
+<br><h1>Пример использования функции array_pad():</h1> 
+                </div>
+		<div class="syntax">
+	$arr = array(12, 10, 4);
+<br>$result = array_pad($arr, 5, 0);
+<br>// $result = array(12, 10, 4, 0, 0);
+<br>$result = array_pad($arr, -7, -1);
+<br>// $result = array(-1, -1, -1, -1, 12, 10, 4)
+<br>$result = array_pad($arr, 2, "noop");
+<br>// не добавит
+                </div>
+		

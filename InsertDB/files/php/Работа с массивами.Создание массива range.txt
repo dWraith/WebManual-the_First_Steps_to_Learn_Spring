@@ -1,0 +1,38 @@
+<div class="title">range</div>
+                <h1>Описание:</h1>
+                <div class="text">
+       Создает массив и заполняет его значениями.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	array range(int low, int high[, int step])
+                </div>
+		<div class="text">
+        Функция range() возвращает массив с значениями от low по high включительно. Если low > high, то последовательность будет от high до low. 
+Дополнительный параметр step был введен в PHP 5.0. 
+Если третий параметр указан, то числа будут вводиться от low до high с шагом step. Если он не указан, то шаг будет равен 1. 
+Пример использования функции range():
+                </div>
+		<div class="syntax">
+	<?php
+<br>// array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+<br>foreach (range(0, 12) as $number) {    
+<br>echo $number;
+<br>}
+<br>// The step parameter was introduced in 5.0.0
+<br>// array(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+<br>foreach (range(0, 100, 10) as $number) { 
+<br>echo $number;
+<br>}
+<br>// Use of character sequences introduced in 4.1.0
+<br>// array("a", "b", "c", "d", "e", "f", "g", "h", "i");
+<br>foreach (range("a", "i") as $letter) {    
+<br>echo $letter;
+<br>}
+<br>// array("c", "b", "a");
+<br>foreach (range("c", "a") as $letter) {   
+<br> echo $letter;
+<bR>}
+<br>?>
+                </div>
+		

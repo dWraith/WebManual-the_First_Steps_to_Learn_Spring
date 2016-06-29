@@ -1,0 +1,18 @@
+<div class="title">ceil</div>
+                <h1>Описание:</h1>
+                <div class="text">
+             Дополнение дробного числа до следующего целого. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+        int ceil(float $number)
+                </div>
+		<div class="text">
+            Возвращает наименьшее целое число, не меньше $number. Разумеется, передавать в $number целое число бессмысленно. 
+                </div>
+		<div class="syntax">
+$x = ceil(5.0);  // $x=5
+<br>$x = ceil(5.1);  // $x=6
+<br>$x = ceil(5.9);  // $x=6
+                </div>
+		

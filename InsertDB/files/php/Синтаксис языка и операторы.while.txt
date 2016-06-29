@@ -1,0 +1,29 @@
+<div class="title">while</div>
+                <h1>Описание:</h1>
+                <div class="text">
+              Простейший тип цикла в PHP. Заставляет PHP выполнять вложенные операторы до тех пор, пока условие равно TRUE. Если условие равно FALSE с самого начала, то цикл не выполнится не разу.
+                </div>
+                <h1>Синтаксис:</h1>
+                <div class="syntax">
+               WHILE(условие)выражения
+                </div>
+		<div class="text">
+              Можно сгруппировать несколько операторов внутри фигурных скобок или использовать альтернативный синтаксис : WHILE(условие)выражения... ENDWHILE; 
+                </div>
+		<div class="syntax">
+<?php
+<br>$a=1;
+<br>while ($a <= 5) { 
+<br>echo $a++;
+<br>}
+<br>?>
+                </div>
+                <div class="syntax">
+<?php
+<br>$a = 1;
+<br>while($a <= 5):
+<br>echo $a;  
+<br>$a++;
+<br>endwhile;
+<br>?>  
+		</div>

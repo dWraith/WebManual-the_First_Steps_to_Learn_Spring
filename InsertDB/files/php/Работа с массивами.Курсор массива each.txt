@@ -1,0 +1,32 @@
+<div class="title">each</div>
+                <h1>Описание:</h1>
+		<div class="text">
+      Получение текущего элемента массива. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	array each(array arr)
+                </div>
+		<div class="text">
+Функция each() возвращает пару"индекс и значение" текущего элемента массива, на который указывает внутренний курсор, и сдвигает курсор массива на следующий элемент. 
+<br><h1>Пример использования функции each(): </h1>
+                </div>
+		<div class="syntax">
+   	<?php
+<br>$foo = array("bob", "fred", "jussi", "jouni", "egon", "marliese");
+<br>$bar = each($foo);
+<br>print_r($bar);
+<br>?>
+                </div>
+		div class="text">
+Массив $bar будет иметь ключи и значения:
+                </div>
+		<div class="syntax">
+   	Array
+<bR>(
+<br>    [1] => bob
+ <bR>   [value] => bob
+  <bR>  [0] => 0
+    <br>[key] => 0
+<bR>)
+                </div>

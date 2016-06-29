@@ -1,0 +1,27 @@
+<div class="title">list</div>
+                <h1>Описание:</h1>
+                <div class="text">
+  Заносит элементы массива в переменные.  
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+ void list ( mixed ...)
+                </div>
+		<div class="text">
+	Наподобие array(), функция list() не совсем функция, а языковая конструкция. Она используется для формирования списка переменных. 
+Замечание: list() работает только с цифровыми индексами массива и принимает ключи элементов начиная с 0. 
+                </div>
+		<div class="syntax">
+	<?php
+<br>$info = array("coffee", "brown", "caffeine");
+<br>// Выведем все переменные
+<br>list($drink, $color, $power) = $info;
+<br>echo "$drink is $color and $power makes it special.n";
+<br>// Выведем первый и последний
+<br>list($drink, , $power) = $info;
+<br>echo "$drink has $power.n";
+<br>// Выведем только третий
+<br>list( , , $power) = $info;
+<br>echo "I need $power!n";
+<br>?>
+                </div>

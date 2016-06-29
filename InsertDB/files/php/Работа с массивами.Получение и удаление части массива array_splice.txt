@@ -1,0 +1,23 @@
+<div class="title">array_splice</div>
+                <h1>Описание:</h1>
+		<div class="text">
+      Удаляет часть массива или заменяет ее частью другого массива. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	array array_splice(array arr, int offset [, int lenght [, int replacement]])
+                </div>
+		<div class="text">
+Функция array_splice(), также как и array_slice(), возвращает подмасcив arr начиная с индекса offset максимальной длины lenght, но, вместе с тем, она делает и другое полезное действие. А именно, она заменяет только что указанные элементы на то, что находится в массиве replacement (или просто удаляет, если replacement не указан). 
+Если offset>0, то последовательность будет начинаться с элемента, имеющего позицию offset от начала массива, а если <0, то отсчет производится от конца массива. Надо отметить, что первый элемент имеет нулевую позицию, а последний (-1). 
+Если указать length>0, то это число возвращаемых в массиве элементов, а если length<0, то это позиция последнего возвращаемого элемента в массиве arr от его конца. 
+В качестве примера укажем следующие эквивалентыне замены: 
+                </div>
+		<div class="syntax">
+   	array_push($input, $x, $y)     <br>array_splice($input, count($input), 0, array($x, $y))
+<bR>array_pop($input)     array_splice($input, -1)
+<br>array_shift($input)     array_splice($input, -1)
+<br>array_unshift($input, $x, $y)     array_splice($input, 0, 0, array($x, $y))
+<br>$a[$x] = $y     array_splice($input, $x, 1, $y)
+                </div>
+		

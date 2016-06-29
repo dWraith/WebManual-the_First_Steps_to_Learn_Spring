@@ -1,0 +1,14 @@
+<div class="title">exp</div>
+                <h1>Описание:</h1>
+                <div class="text">
+         Возвращает e (2,718281828) в степени $arg.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	     float exp(float $arg)
+                </div>
+		<div class="syntax">
+  $x = exp(1);
+<br>// $x = 2.718281828459
+                </div>
+		

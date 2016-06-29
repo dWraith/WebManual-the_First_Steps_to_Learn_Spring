@@ -1,0 +1,47 @@
+<div class="title">array_walk</div>
+                <h1>Описание:</h1>
+		<div class="text">
+      Применение пользовательской функции к элементам массива.
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	bool array_walk(array arr, callback function [, mixed userdata])
+                </div>
+		<div class="text">
+Функция array_walk() применяет пользовательскую функцию function к каждому элементу массива arr. В пользовательскую функцию передаются три или два (в случае, если аргумент userdata не указан) аргумента: значение текущего элемента, его индекс и аргумент userdata. 
+В случае, если function требует более трех аргументов, при каждом ее вызове будет выдаваться предупреждение. Чтобы блокировать выдачу этих предупреждений, поставте знак "@" перед функцией array_walk() или воспользуйтесь функцией error_reporting(). 
+Функция function будет получать значения и индексы массива arr по занчению, т.е. не сможет вносить в него изменения. Если это необходимо, передайте аргумент arr по ссылке, указав перед его именем "&", и тогда все изменения отразяться в массиве. 
+В PHP 4 необходимо явно вызывать функцию reset(), чтобы установить внутренний курсор на первый элемент. 
+<b>Пример использования функции array_walk():</b>
+                </div>
+		<div class="syntax">
+   	<?php
+<br>$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+<br>function test_alter(&$item1, $key, $prefix) 
+<br>{    
+<br>$item1 = "$prefix: $item1";}function test_print($item2, <br>$key) 
+<br>{    
+<br>echo "$key. $item2<br />n";
+<br>}
+<br>echo "Before ...:n";
+<br>array_walk($fruits, "test_print");
+<br>array_walk($fruits, "test_alter", "fruit");
+<br>echo "... and after:n";
+<br>array_walk($fruits, "test_print");
+<br>?>
+                </div>
+		div class="text">
+Приведенный пример выведет следующее: 
+                </div>
+		<div class="syntax">
+   	Before ...:
+<br>d. lemon
+<br>a. orange
+<br>b. banana
+<br>c. apple
+<br>... and after:
+<br>d. fruit: lemon
+<br>a. fruit: orange
+<br>b. fruit: banana
+<br>c. fruit: apple
+                </div>

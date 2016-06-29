@@ -1,0 +1,19 @@
+<div class="title">log</div>
+                <h1>Описание:</h1>
+                <div class="text">
+          Возвращает натуральный логарифм аргумента 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	      float log(float $arg)
+                </div>
+		<div class="text">
+        В случае недопустимого числа печатает предупреждение, но не завершает программу.
+                </div>
+		<div class="syntax">
+  $x = log(exp(2));  // exp(2) - e в степени 2                   
+		    <br>// $x = 2
+<br>$x = log(M_E);     // $x = 1
+<br>echo log(10);      // выведет 2.302585092994
+                </div>
+		

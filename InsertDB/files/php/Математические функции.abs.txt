@@ -1,0 +1,17 @@
+<div class="title">abs</div>
+                <h1>ќписание:</h1>
+                <div class="text">
+             ¬озвращает модуль числа.
+                </div>
+                 <h1>—интаксис:</h1>
+                <div class="syntax">
+        mixed abs(mixed $number)
+                </div>
+		<div class="text">
+             “ип параметра $number может быть float или int, а ти п возвращаемого значени€ всегда совпадает с типом этого параметра
+                </div>
+		<div class="syntax">
+       $x = abs(-4);    // $x=4
+<br>$x = abs(-7.45); // $x=7.45
+                </div>
+		

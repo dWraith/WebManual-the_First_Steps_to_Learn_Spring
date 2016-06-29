@@ -1,0 +1,23 @@
+<div class="title">array_pop</div>
+                <h1>Описание:</h1>
+                <div class="text">
+      Извлекает и удаляет последние элементы массива. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	mixed array_pop(array arr); 
+                </div>
+		<div class="text">
+        Функция array_pop() извлекает последний элемент из массива arr и возвращает его, удалив после этого. С помощью этой функции мы можем строить конструкции, напоминающие стек. Если массив arr был пуст, или это не массив, функция возвращает пустую строку NULL. 
+После использования функции array_pop() курсор массива устанавливается в начало. 
+<br><h1>Пример использования функции array_pop(): </h1>
+                </div>
+		<div class="syntax">
+	<?php
+<br>$stack = array("orange", "apple", "raspberry");
+<br>$fruits = array_pop($stack);
+<br>print_r($stack);
+<br>print_r($fruits);
+<br>?>
+                </div>
+		

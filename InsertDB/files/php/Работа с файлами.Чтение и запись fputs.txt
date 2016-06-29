@@ -1,0 +1,10 @@
+<div class="title">fputs</div>
+                <h1>Описание:</h1>
+                <div class="text">
+               Полный аналог fwrite().  
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	   int fputs(int $f, string $str)
+                </div>
+		

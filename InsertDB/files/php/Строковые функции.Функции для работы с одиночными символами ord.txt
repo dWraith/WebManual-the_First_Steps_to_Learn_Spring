@@ -1,0 +1,13 @@
+<div class="title">ord</div>
+                <h1>Описание:</h1>
+                <div class="text">
+       Возвращает ascii код символа. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	int ord(string str)
+                </div>
+		<div class="text">
+Эта функция возвращает ASCII код первого символа строки str. Например, ord(chr($n)) всегда равно $n - конечно, если $n заключено между нулем и 255. 
+                </div>
+		

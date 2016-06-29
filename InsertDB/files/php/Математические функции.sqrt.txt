@@ -1,0 +1,20 @@
+<div class="title">sqrt</div>
+                <h1>ќписание:</h1>
+                <div class="text">
+          ¬озвращает квадратный корень из аргумента. 
+                </div>
+                 <h1>—интаксис:</h1>
+                <div class="syntax">
+   	      float sqrt(float $arg)
+                </div>
+		<div class="text">
+         ≈сли аргумент отрицателен, то генерируетс€ предупреждение, но работа программы не прекращаетс€!
+                </div>
+		<div class="syntax">
+  $x = max(5,3,4,6,5,6,8,9);
+<br>$x = sqrt(9);
+<br>// $x = 3
+<br>echo sqrt(25);     // выведет 5
+<br>echo sqrt(-25); // выведет -1.#IND
+                </div>
+		

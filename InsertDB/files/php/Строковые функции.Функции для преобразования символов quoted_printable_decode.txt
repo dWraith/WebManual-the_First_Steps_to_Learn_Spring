@@ -1,0 +1,12 @@
+<div class="title">quoted_printable_decode</div>
+                <h1>Описание:</h1>
+                <div class="text">
+              Преобразование цитированной строки в 8-битную. 
+                </div>
+                 <h1>Синтаксис:</h1>
+                <div class="syntax">
+   	    string quoted_printable_decode(string str);
+                </div>
+		
+		
+		
