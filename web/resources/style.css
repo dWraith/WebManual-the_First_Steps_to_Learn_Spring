@@ -332,6 +332,7 @@ form table {
     overflow-x: hidden;
     padding: 15px 15px;
     color: black;
+    font-weight: 100;
 }
 
 .text {
@@ -576,7 +577,16 @@ button:focus {
         line-height: 140%;
         color: #363636;
         padding: 5px 0px;
-        display: inline-block;
+    }
+    
+    #title .syntax {
+        background: #d4d4d4;
+        font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+        padding: 15px 15px;
+        color: black;
+        font-size: 12px;
+        line-height: initial;
+        font-weight: 100;
     }
     
     .search_user_item #link {

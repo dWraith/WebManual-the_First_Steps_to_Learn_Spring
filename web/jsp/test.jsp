@@ -30,14 +30,14 @@
                 var questions = document.getElementsByName('question[]');
                 var answers;
                 var first_wrong_answer = null;
+                var correctAnswer;
                     for(var i = 0; i<10; i++) {
-                        correctAnswer = questions[i].getAttribute("correct")-1;
-                        correctAnswer %= 4;
+                        correctAnswer = document.getElementById(questions[i].getAttribute("correct"));
                         answers = document.getElementsByName((i+1)+"[]");
                         for(var j = 0; j<4; j++) {
                             answers[j].disabled = true;
                         }
-                        if(answers[correctAnswer].checked) {
+                        if(correctAnswer.checked) {
                             questions[i].style.borderBottom="2px solid seagreen";
                             score += 2;
                             correct_answers++;
@@ -111,14 +111,14 @@
                 </div>
             </div>
             <div id="search_pane">
-                <c:forEach var="question" items="${test.questions}">
+                <c:forEach var="question" varStatus="loop" items="${test.questions}">
                     <div name="question[]" correct="${question.correctAnswer.id}" class="test_item">
                         <div id="title"><span>${question.question}</span></div>
                         <table>
-                            <c:forEach var="answer" items="${question.answers}">
+                            <c:forEach var="answer"  items="${question.answers}">
                                 <tr>
                                     <td>
-                                        <input id="${answer.id}" name="${question.id}[]" type="radio"><span name="${question.id}">${answer.answer}</span></input>
+                                        <input id="${answer.id}" name="${loop.index+1}[]" type="radio"><span name="${question.id}">${answer.answer}</span></input>
                                     </td>
                                 </tr>
                             </c:forEach>

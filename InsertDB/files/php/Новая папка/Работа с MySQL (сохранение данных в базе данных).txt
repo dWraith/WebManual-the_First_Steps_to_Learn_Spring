@@ -1,0 +1,267 @@
+<div class="title">Работа с MySQL.Save</div>
+<div class="text">Мы научились извлекать данные из базы и выводить их на странице. Теперь давай попробуем осуществить
+обратное действие. С PHP это не составит большого труда. Создадим простую форму:</div>
+<div class="syntax">
+&#60;html&#62;
+<br>&#60;body&#62;
+<br><form method="post" action="&#60;?php echo $PHP_SELF?>"&#62;
+<br>First name:&#60;input type="Text" name="first"&#62;&#60;br&#62;
+<br>Last name:&#60;input type="Text" name="last"&#62;&#60;br&#62;
+<br>Address:&#60;input type="Text" name="address"&#62;&#60;br&#62;
+<br>Position:&#60;input type="Text" name="position"&#62;&#60;br&#62;
+<br>&#60;input type="Submit" name="submit" value="Enter information"&#62;
+<br>&#60;/form&#62;
+<br>&#60;/body&#62;
+<br>&#60;/html&#62;
+</div>
+<div class="text">
+Обратите внимание, мы опять используем переменную $PHP_SELF. Как мы уже сказали, PHP-код можно как
+угодно перемешивать с обычным HTML. Также обратите внимание, что название каждого элемента формы
+совпадает с названием поля в базе данных. Вообще-то, это не обязательно, но весьма удобно, чтобы в
+дальнейшем не запутаться в том, какая переменная какому полю в базе данных соответствует.
+Помимо этого мы присвоили имя кнопке Submit. Это сделано для того, чтобы в коде затем проверить, есть ли
+переменная $submit. Таким образом, когда страница будет вызываться, мы будем узнавать, вызывается ли она в
+первый или во второй раз.
+Введение в PHP и MySQL 21
+Следует еще раз отметить, что вовсе не обязательно писать код так, чтобы страница снова и снова вызывала
+саму себя. Программу можно разделить на две, три и более страниц, если угодно. Но при таком подходе, вся
+программа находится в одном файле, а это бывает весьма удобно.
+Итак, давайте добавим код, который будет проверять, введены ли в форму данные. Пока это будет лишь
+простая проверка, при которой все переменные, передаваемые странице, будут выводиться на экран с помощью
+переменной $HTTP_POST_VARS. Эта переменная удобна в случае отладки. Если вы хотите вывести на экран
+вообще все переменные, используемые в странице, вызовите переменную $GLOBALS
+</div>
+<div class="syntax">
+&#60;html&#62;
+<br>&#60;body&#62;
+<br>&#60;?php
+<br>if ($submit) {
+<br>// process form
+<br>while (list($name, $value) = each($HTTP_POST_VARS)) {
+<br>echo "$name = $value&#60;br&#62;\n";
+<br>}
+<br>} else{
+<br>// display form
+<br>?&#62;
+<br>&#60;form method="post" action="&#60;?php echo $PHP_SELF?&#62;"&#62;
+<br>First name:&#60;input type="Text" name="first"&#62;&#60;br&#62;
+<br>Last name:&#60;input type="Text" name="last"&#62;&#60;br&#62;
+<br>Address:&#60;input type="Text" name="address"&#62;&#60;br&#62;
+<br>Position:&#60;input type="Text" name="position"&#62;&#60;br&#62;
+<br>&#60;input type="Submit" name="submit" value="Enter information"&#62;
+<br>&#60;/form&#62;
+<br>&#60;?php
+<br>} // end if
+<br>?&#62;
+<br>&#60;/body&#62;
+<br>&#60;/html&#62;
+</div>
+<div class="text">Ну что ж, выглядит неплохо. Теперь давайте возьмем подданную через форму информацию и внесем ее в базу
+данных.</div>
+<div class="syntax">
+&#60;html&#62;
+<br>&#60;body&#62;
+<br>&#60;?php
+<br>if ($submit) {
+<br>// process form
+<br>$db = mysql_connect("localhost", "root");
+<br>mysql_select_db("mydb",$db);
+<br>$sql = "INSERT INTO employees (first,last,address,position) VALUES
+<br>('$first','$last','$address','$position')";
+<br>$result = mysql_query($sql);
+<br>echo "Thank you! Information entered.\n";
+<br>} else{
+<br>// display form
+<br>?&#62;
+<br>&#60;form method="post" action="&#60;?php echo $PHP_SELF?&#62;"&#62;
+<br>First name:&#60;input type="Text" name="first"&#62;&#60;br&#62;
+<br>Last name:&#60;input type="Text" name="last"&#62;&#60;br&#62;
+<br>Address:&#60;input type="Text" name="address"&#62;&#60;br&#62;
+<br>Position:&#60;input type="Text" name="position"&#62;&#60;br&#62;
+<br>&#60;input type="Submit" name="submit" value="Enter information"&#62;
+<br>&#60;/form&#62;
+<br>&#60;?php
+<br>}
+<br>// end if
+<br>?&#62;
+<br>&#60;/body&#62;
+<br>&#60;/html&#62;
+</div>
+<div class="text">Мы внесли данные в базу. Тем не менее наш код далек от идеального. Что случится, если при заполнении
+формы кто-то оставит пустые поля или введет текст в поле, в которое надо ввести число? Что произойдет, если
+в поданных данных будет ошибка? Не беспокойтесь. Сейчас мы все исправим.
+На протяжении всего учебника мы записывали SQL-выражение в переменную ($sql), прежде чем передать
+запрос в базу данных через функцию <b>mysql_query().</b> Это делается на случай отладки. Если что-то пойдет не
+так, мы всегда сможем вывести интересующее нас SQL-выражение на экран и проверить, нет ли в нем ошибок.
+Мы уже знаем, как вставлять данные в базу. Теперь давайте научимся менять записи, которые уже находятся в
+таблице. Редактирование данных сочетает в себе два кода. Которые мы уже проходили: извлечение данных из
+базы с выводом их на экран, и внесение данных через форму обратно в базу. Тем не менее программа правки
+данных немного отличается тем, что мы в форме должны вывести некую конкретную запись. Для начала
+давайте воспользуемся кодом из предыдущей главы, для вывода списка служащих на экран. Однако теперь
+информацию о служащих мы будет отображать в форме. Код страницы будет выглядеть так:</div>
+<div class="syntax">
+&#60;html&#62;
+<br>&#60;body&#62;
+<br>&#60;?php
+<br>$db = mysql_connect("localhost", "root");
+<br>mysql_select_db("mydb",$db);
+<br>if ($id) {
+<br>// query the DB
+<br>$sql = "SELECT * FROM employees WHERE id=$id";
+<br>$result = mysql_query($sql);
+<br>$myrow = mysql_fetch_array($result);
+<br>?&#62;
+<br>&#60;form method="post" action="&#60;?php echo $PHP_SELF?&#62;"&#62;
+<br>&#60;input type=hidden name="id" value="&#60;?php echo $myrow["id"] ?&#62;"&#62;
+<br>First name:&#60;input type="Text" name="first" value="&#60;?php echo $myrow["first"] ?&#62;"&#62;&#60;br&#62;
+<br>Last name:&#60;input type="Text" name="last" value="&#60;?php echo $myrow["last"] ?&#62;"&#62;&#60;br&#62;
+<br>Address:&#60;input type="Text" name="address" value="<&#60;?php echo $myrow["address"] ?&#62;"&#62;&#60;br&#62;
+<br>Position:&#60;input type="Text" name="position" value="&#60;?php echo $myrow["position"] ?&#62;"&#62;&#60;br&#62;
+<br>&#60;input type="Submit" name="submit" value="Enter information"&#62;
+<br>&#60;/form&#62;
+<br>&#60;?php
+<br>} else {
+<br>// display list of employees
+<br>$result = mysql_query("SELECT * FROM employees",$db);
+<br>while ($myrow = mysql_fetch_array($result)) {
+<br>printf("&#60;a href=\"%s?id=%s\"&#62;%s %s&#60;/a&#62;&#60;br&#62;\n", $PHP_SELF, $myrow["id"], $myrow["first"],
+<br>$myrow["last"]);
+<br>}
+<br>}
+<br>?&#62;
+<br>&#60;/body&#62;
+<br>&#60;/html&#62;
+</div>
+<div class="text">В этой странице мы просто вывели в каждое поле формы соответствующее значение из базы данных, что было
+достаточно несложно. Теперь мы усложним программу. Добавим к ней возможность внесения
+отредактированных данных назад в базу. Опять таки мы прибегаем к помощи кнопки Submit, которой
+присваиваем имя, чтобы при втором проходе страницы проверить, какую часть кода нам надо выполнять.
+Также мы здесь используем слегка измененное SQL-выражение.</div>
+<div class="syntax">
+&#60;html&#62;
+<br>&#60;body&#62;
+<br>&#60;?php
+<br>$db = mysql_connect("localhost", "root");
+<br>mysql_select_db("mydb",$db);
+<br>if ($id) {
+<br>if ($submit) {
+<br>$sql = "UPDATE employees SET first='$first',last='$last',address='$address',position='$position'
+<br>WHERE id=$id";
+<br>$result = mysql_query($sql);
+<br>echo "Thank you! Information updated.\n";
+<br>} else {
+<br>// query the DB
+<br>$sql = "SELECT * FROM employees WHERE id=$id";
+<br>$result = mysql_query($sql);
+<br>$myrow = mysql_fetch_array($result);
+<br>?&#62;
+<br>&#60;form method="post" action="&#60;?php echo $PHP_SELF?&#62;"&#62;
+<br>&#60;input type=hidden name="id" value="&#60;?php echo $myrow["id"] ?&#62;"&#62;
+<br>First name:&#60;input type="Text" name="first" value="&#60;?php echo $myrow["first"] ?&#62;"&#62;&#60;br&#62;
+<br>Last name:&#60;input type="Text" name="last" value="&#60;?php echo $myrow["last"] ?&#62;"&#62;&#60;br&#62;
+<br>Address:&#60;input type="Text" name="address" value="&#60;?php echo $myrow["address"] ?&#62;"&#62;&#60;br&#62;
+<br>Position:&#60;input type="Text" name="position" value="&#60;?php echo $myrow["position"] ?&#62;"&#62;&#60;br&#62;
+<br>&#60;input type="Submit" name="submit" value="Enter information"&#62;
+<br>&#60;/form&#62;
+<br>&#60;?php
+<br>}
+<br>} else {
+<br>// display list of employees
+<br>$result = mysql_query("SELECT * FROM employees",$db);
+<br>while ($myrow = mysql_fetch_array($result)) {
+<br>printf("&#60;a href=\"%s?id=%s\"&#62;%s %s&#60;/a&#62;&#60;br&#62;\n", $PHP_SELF, $myrow["id"], $myrow["first"],
+<br>$myrow["last"]);
+<br>}
+<br>}
+<br>?&#62;
+<br>&#60;/body&#62;
+<br>&#60;/html&#62;
+</div>
+<div class="text">Вот так. Нам удалось вместить все, что мы знаем и умеем в один код. Здесь вы можете увидеть, как мы
+используем выражение if() внутри другого выражения if() для последовательно проверки нескольких условий.
+Теперь пришло время свести все вместе и создать одну супер-крутую PHP-страницу.</div>
+
+<div class="syntax">
+&#60;html&#62;
+<br>&#60;body&#62;
+<br>&#60;?php
+<br>$db = mysql_connect("localhost", "root");
+<br>mysql_select_db("mydb",$db);
+<br>if ($submit) {
+<br>// here if no ID then adding else we're editing
+<br>if ($id) {
+<br>$sql = "UPDATE employees SET first='$first',last='$last',address='$address',position='$position'
+<br>WHERE id=$id";
+<br>} else {
+<br>$sql = "INSERT INTO employees (first,last,address,position) VALUES
+<br>('$first','$last','$address','$position')";
+<br>}
+<br>// run SQL against the DB
+<br>$result = mysql_query($sql);
+<br>echo "Record updated/edited!&#60;p&#62;";
+<br>} elseif ($delete) {
+<br>// delete a record
+<br>$sql = "DELETE FROM employees WHERE id=$id";
+<br>$result = mysql_query($sql);
+<br>echo "$sql Record deleted!&#60;p&#62;";
+<br>} else {
+<br>// this part happens if we don't press submit
+<br>if (!$id) {
+<br>// print the list if there is not editing
+<br>$result = mysql_query("SELECT * FROM employees",$db);
+<br>while ($myrow = mysql_fetch_array($result)) {
+<br>printf("&#60;a href=\"%s?id=%s\"&#62;%s %s&#60;/a&#62; \n", $PHP_SELF, $myrow["id"], $myrow["first"],
+<br>$myrow["last"]);
+<br>printf("&#60;a href=\"%s?id=%s&delete=yes\"&#62;(DELETE)&#60;/a&#62;&#60;br&#62;", $PHP_SELF, $myrow["id"]);
+<br>}
+<br>}
+<br>?&#62;
+<br>&#60;P&#62;
+<br>&#60;a href="&#60;?php echo $PHP_SELF?&#62;"&#62;ADD A RECORD&#60;/a&#62;
+<br>&#60;P&#62;
+<br>&#60;form method="post" action="&#60;?php echo $PHP_SELF?&#62;"&#62;
+<br>&#60;?php
+<br>if ($id)
+<br>{
+<br>// editing so select a record
+<br>$sql = "SELECT * FROM employees WHERE id=$id";
+<br>$result = mysql_query($sql);
+<br>$myrow = mysql_fetch_array($result);
+<br>$id = $myrow["id"];
+<br>$first = $myrow["first"];
+<br>$last = $myrow["last"];
+<br>$address = $myrow["address"];
+<br>$position = $myrow["position"];
+<br>// print the id for editing
+?&#62;
+<br>&#60;input type=hidden name="id" value="&#60;?php echo $id ?&#62;"&#62;
+<br>&#60;?php
+<br>}
+<br>?&#62;
+<br>First name:&#60;input type="Text" name="first" value="&#60;?php echo $first ?&#62;"&#62;&#60;br&#62;
+<br>Last name:&#60;input type="Text" name="last" value="&#60;?php echo $last ?&#62;"&#62;&#60;br&#62;
+<br>Address:&#60;input type="Text" name="address" value="&#60;?php echo $address ?&#62;"&#62;&#60;br&#62;
+<br>Position:&#60;input type="Text" name="position" value="&#60;?php echo $position ?&#62;"&#62;&#60;br&#62;
+<br>&#60;input type="Submit" name="submit" value="Enter information"&#62;
+<br>&#60;/form&#62;
+<br>&#60;?php
+<br>}
+<br>?&#62;
+<br>&#60;/body&#62;
+<br>&#60;/html&#62;
+</div>
+<div class="text">На первый взгляд код выглядит сложным, однако это не так. Программа делится на три части. Первое if()
+выражение проверяет, была ли нажата кнопка Submit, и если была, проводится проверка, есть ли в поданных
+данных переменная $id. Если ее нет, значит происходит добавление новой записи. В противном случае мы
+редактируем уже существующую запись.
+Далее мы проверяем, определена ли переменная $delete. Если да, мы удаляем запись. Обратите внимание, что в
+первом выражении if() мы проверяем переменную, которая была подана с помощью метода POST, а в данном
+if() выражении мы проверяем переменную, которая является частью данных отправленных с помощью метода
+GET.
+Наконец, мы переходим к действию, которое будет выполняться по умолчанию: то есть выводим просто
+список служащих и форму. Здесь мы опять проверяем существование переменной $id. Если она существует, мы
+просим базу данных выдать сведения о выбранном служащем. В противном случае выводим пустую форму.
+Все, чему мы научились, мы поместили в один большой код. Мы использовали циклы while() и выражения if(),
+а также целую гамму основных команд языка SQL - SELECT, INSERT, UPDATE, и DELETE
+Наконец, мы рассмотрели, как можно передавать информацию от одной страницы к другой через URL с
+помощью ссылок и через формы.</div>

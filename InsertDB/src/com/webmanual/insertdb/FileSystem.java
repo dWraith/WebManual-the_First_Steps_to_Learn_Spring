@@ -43,7 +43,7 @@ public class FileSystem {
     }
     
     public static void createFile() {
-        File layout = new File("files/css.html");
+        File layout = new File("files/create/layout/css.html");
         try {
             Document doc = Jsoup.parse(layout, "UTF-8");
             Session session = HibernateUtil.getSessionFactory().openSession();
@@ -54,7 +54,7 @@ public class FileSystem {
             session.close();
             PrintWriter writer;
             for(Page page : listPages) {
-                File file = new File("files/" + page.getName() + ".html");
+                File file = new File("files/create/css/" + page.getName() + ".html");
                 doc.select("div#content").html(page.getContent());
                 writer = new PrintWriter(file,"UTF-8");
                 writer.print(doc.html());

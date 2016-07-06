@@ -1,0 +1,20 @@
+﻿<div class="title">Маленькие советы</div>
+<div class="text">
+<br>Hачинающий: echo "$var";
+<br>Пpофи: echo $var;
+<br>
+<br>Начинающий: print("Test");
+<br>Пpофи: print "Test";
+<br>
+<br>Hачинающий: echo"&#60;a href=\"http://www.php.net\"&#62;PHP&#60;/a&#62;";
+<br>Пpофи: ?&#62;&#60;a href="http://www.php.net"&#62;PHP&#60;/a&#62;&#60;?
+<br>
+<br>Hачинающий: $a[0]=1; $a[1]=2; $a[2]=3;
+<br>Пpофи: $a = array(1,2,3);
+<br>
+<br>Hачинающий: if($a&#62;1) { $b=2; } else { $b=3; }
+<br>Пpофи: $b = ($a&#62;1) ? 2:3;
+<br>
+<br>Hачинающий: $result=mysql_query(...);
+<br>Пpофи: $result=mysql_query(...) or die (mysql_error());
+</div>

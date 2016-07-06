@@ -61,24 +61,12 @@
                         </div>
                     </div>
                 </c:forEach>
-                <c:if test="${pages.size()/10 < 10 and pages.size()/10 > 1}">
+                <c:if test="${pages.size()/10 > 1}">
                     <c:forEach begin="1" end="${Math.ceil(pages.size()/10)}" varStatus="loop">
                         <div class="pagination"><a href="pages?page=${loop.index}"><c:out value="${loop.index}"/></a></div>
                     </c:forEach>
                 </c:if>
-                <c:if test="${pages.size()/10 > 10 and param.page<(pages.size()/10)-10}">
-                    <div class="pagination"><a href="pages?page=1">..</a></div>
-                    <c:forEach begin="${param.page}" end="${param.page+10}" varStatus="loop">
-                        <div class="pagination"><a href="pages?page=${loop.index}"><c:out value="${loop.index}"/></a></div>
-                    </c:forEach>
-                    <div class="pagination"><a href="pages?${pages.size()/10}">..</a></div>
-                </c:if>
-                <c:if test="${pages.size()/10 > 10 and param.page>pages.size()-10}">
-                    <div class="pagination"><a href="pages?page=1">..</a></div>
-                    <c:forEach begin="${pages.size()-10}" end="${pages.size()}" varStatus="loop">
-                        <div class="pagination"><a href="pages?page=${loop.index}"><c:out value="${loop.index}"/></a></div>
-                    </c:forEach>
-                </c:if>
+                
             </div>
         <%@ include file="layout/footer.jsp"%> 
     </body>

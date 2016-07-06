@@ -1,0 +1,174 @@
+﻿<div class="title">Пример создания законченного приложения</div>
+<div class="text">Создадим простой HTML файл-форму.</div>
+<div class="syntax">
+&#60;HTML&#62;
+<br>&#60;HEAD&#62;
+<br>&#60;TITLE&#62;Запрос информации&#60;/TITLE&#62;
+<br>&#60;BODY&#62;
+<br>&#60;CENTER&#62;
+<br>Хотите больше знать о наших товарах?
+<br>&#60;P&#62;
+<br>&#60;TABLE WIDTH = 400&#62;&#60;&#62;&#60;TR&#62;&#60;TD align = right&#62;
+<br>&#60;FORM ACTION="email.php3" METHOD="POST"&#62;
+<br>Ваше имя:&#60;BR&#62;
+<br>&#60;INPUT TYPE="text" NAME="name" SIZE="20" MAXLENGTH="30"&#62;
+<br>&#60;P&#62;
+<br>Ваш email:&#60;BR&#62;
+<br>&#60;INPUT TYPE="text" NAME="email" SIZE="20" MAXLENGTH="30"&#62;
+<br>&#60;P&#62;
+<br>Меня интересуют:
+<br>&#60;SELECT NAME="preference"&#62;
+<br>&#60;OPTION value = "Яблоки"&#62;Яблоки
+<br>&#60;OPTION value = "Апельсины"&#62;Апельсины
+<br>&#60;/SELECT&#62;
+<br>&#60;P&#62;
+<br>&#60;INPUT TYPE="submit" VALUE="Отправить запрос!"&#62;
+<br>&#60;/FORM&#62;
+<br>&#60;/TD&#62;&#60;/TR&#62;&#60;/TABLE&#62;&#60;/CENTER&#62;
+<br>&#60;/BODY&#62;
+<br>&#60;/HTML&#62;
+</div>
+<div class="text">
+Назовем этот файл request.html. В нем мы указали, что данные формы будут обрабатываться файлом email.php3.
+Приведем его содержание:
+</div>
+<div class="syntax">
+<?
+<br>/* Этот скрипт получает переменные из request.html */
+<br>PRINT "&#60;CENTER&#62;";
+<br>PRINT "Привет, $name.";
+<br>PRINT "&#60;BR&#62;&#60;BR&#62;";
+<br>PRINT "Спасибо за ваш интерес.&#60;BR&#62;&#60;BR&#62;";
+<br>PRINT "Вас интересуют $preference. Информацию о них мы пошлем вам на email: $email.";
+<br>PRINT "&#60;/CENTER&#62;";
+<br>?&#62;
+</div>
+<div class="text">Теперь, если пользователь вызовет request.html и наберет в форме имя “Вася”, email: vasya@pupkin.com и
+скажет, что его интересуют “Яблоки”, а после этого нажмет "Отправить запрос!", то на экране появится
+следующий текст:</div>
+<div class="syntax">
+Привет, Вася
+<br>Спасибо за ваш интерес.
+<br>Вас интересуют Яблоки. Информацию о них мы пошлем вам на email: vasya@pupkin.com
+</div>
+<div class="text">Давайте усложним пример. Мы должны сдержать обещание и выслать email.
+Для этого в PHP есть функция MAIL.</div>
+<div class="syntax">
+<b>void mail(string to, string subject, string message, string add_headers);</b>
+<br>to – email адрес получателя.
+<br>subject – тема письма.
+<br>message – собственно текст сообщения.
+<br>add_headers – другие параметры заголовка письма (необязательный параметр).
+</div>
+<div class="text">Допишем в конец файла email.php3 следующий код:</div>
+<div class="syntax">
+&#60;?
+<br>mail($email, "Запрос на информацию", "$name\n
+<br>Спасибо за ваш интерес!\n
+<br>Вас интересуют $preference\n
+<br>Мы их распространяем бесплатно. Обратитесь в ближайший филиал нашей компании и получите ящик этого
+продукта.\n
+<br>");
+<br>mail("administration@me.com",
+<br>"Был запрос на информацию.",
+<br>"$name интересовали $preference\n
+<br>email-адрес: $email. \n");
+<br>?&#62;
+</div>
+<div class="text">Вот теперь пользователь будет получать письмо с более подробной информацией о наших товарах. Также
+письмо получит и администратор сайта.
+Когда интересующихся нашими товарами станет очень много, мы захотим их как-то упорядочить и хранить
+информацию о них в базе данных.
+Теперь наш файл email.php3 будет иметь следующий вид:</div>
+<div class="syntax">
+&#60;?
+<br>/* Этот скрипт получает переменные из request.html */
+<br>/* Некоторые переменные */
+<br>$hostname = "localhost";
+<br>$username = "myusername";
+<br>$password = "mypassword";
+<br>$dbName = "products";
+<br>/* Таблица MySQL, в которой хранятся данные */
+<br>$userstable = "clients";
+<br>/* email администратора */
+<br>$adminaddress = "administration@me.com";
+<br>/* создать соединение */
+<br>$db = mysql_connect($hostname,$username,$password) or die("Не могу создать соединение ");
+<br>mysql_select_db("$dbName",$db) or die("Не могу выбрать базу данных ");
+<br>print "&#60;CENTER&#62;";
+<br>print "Привет, $name.";
+<br>print "&#60;BR&#62;&#60;BR&#62;";
+<br>print "Спасибо за ваш интерес.&#60;BR&#62;&#60;BR&#62;";
+<br>print "Вас интересуют $preference. Информацию о них мы пошлем вам на email: $email.";
+<br>print "&#60;/CENTER&#62;";
+<br>/* Отправляем email */
+<br>mail($email, "Запрос на информацию", "$namen\n
+<br>Спасибо за ваш интерес!\n
+<br>Вас интересуют $preference\n
+<br>Мы их распространяем бесплатно. Обратитесь в ближайший филиал нашей компании и получите ящик этого
+<br>продукта.\n
+<br>");
+<br>mail("administration@me.com",
+<br>"Был запрос на информацию.",
+<br>"$name интересовали $preference\n
+<br>email-адрес: $email. \n");
+<br>/* Вставить информацию о клиенте в таблицу */
+<br>$query = "INSERT INTO $userstable VALUES('$name','$email', '$preference')";
+<br>$result = mysql_query($query);
+<br>print "Информация о вас занесена в базу данных.";
+<br>/* Закрыть соединение */
+<br>mysql_close();
+<br>?&#62;
+</div>
+<div class="text">Теперь кроме письменных уведомлений, информация о клиенте и его интересах будет заносится в таблицу
+MySQL.
+После занесения данных, нас иногда будет интересовать вопрос так кого же из наших клиентов интересует
+товар “Яблоки” (не путать с Apple Macintosh, по поводу Apple Macintosh см. www.stealthcomp.com).
+Напишем скрипт apple.php3</div>
+<div class="syntax">
+&#60;?/* Скрипт показывает клиентов, которые яблоки любят больше, чем апельсины */
+<br>$hostname = "localhost";
+<br>$username = "myusername";
+<br>$password = "mypassword";
+<br>$dbName = "products";
+<br>/* Таблица MySQL, в которой хранятся данные */
+<br>$userstable = "clients";
+<br>/* создать соединение */
+<br>mysql_connect($hostname,$username,$password) or die("Не могу создать соединение ");
+<br>@mysql_select_db("$dbName") or die("Не могу выбрать базу данных ");
+<br>/* Выбрать всех клиентов - яблочников */
+<br>$query = "SELECT * FROM $userstable WHERE choice = 'Яблоки'";
+<br>$result = mysql_query($query);
+<br>/* Как много нашлось таких */
+<br>$number = mysql_numrows($result);
+<br>/* Напечатать всех в красивом виде*/
+<br>$i = 0;
+<br>if ($number == 0)
+<br>{
+<br>print "&#60;CENTER&#62;&#60;P&#62;Любителей яблок нет&#60;/CENTER&#62;";
+<br>}
+<br>elseif ($number &#62; 0)
+<br>{
+<br>print "&#60;CENTER&#62;&#60;P&#62;Количество любителей яблок: $number&#60;BR&#62;&#60;BR&#62;";
+<br>while ($i < $number)
+<br>{
+<br>$name = mysql_result($result,$i,"name");
+<br>$email = mysql_result($result,$i,"email");
+<br>print "Клиент $name любит Яблоки.&#60;BR&#62;";
+<br>print "Его Email: $email.";
+<br>print "&#60;BR&#62;&#60;BR&#62;";
+<br>$i++;
+<br>}
+<br>print "&#60;/CENTER&#62;";
+<br>}
+<br>?&#62;
+</div>
+
+
+<div class="text">Здесь мы использовали новую функцию:</div>
+<div class="syntax">
+<b>int mysql_num_rows(int result);</b>
+<br><b>Параметры:</b>
+<br>result – содержит ID результата запроса.
+<br>Функция возвращает количество строк в результате запроса.
+</div>

@@ -78,11 +78,11 @@ public class HtmlFile {
     
     public Page getPage() {
         Page page = new Page();
-        changeIntoDiv();
-        page.setIdLanguage(1);
+        page.setIdLanguage(2);
         addLinks();
+        page.setDescription(getDescription());
         page.setName(getTitle());
-        page.setIdTocText(2);
+        page.setIdTocText(3);
         page.setContent(doc.html().replaceAll("<body>", "").replaceAll("</body>", "").replaceAll("<head>", "").replaceAll("</head>", "").replaceAll("<html>", "").replaceAll("</html>", ""));
         return page;
     }
